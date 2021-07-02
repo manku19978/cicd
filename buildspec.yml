@@ -7,12 +7,12 @@ phases:
       - npm i
   build:
     commands:
-      - echo eslint running...
-      - npm run eslint-check
       - echo Testing...
       - npm run test
       - echo Building...
       - npm run build
 artifacts:
   files:
-    - "./build/**"
+    - "**/*"
+  discard-paths: no
+  base-directory: build
